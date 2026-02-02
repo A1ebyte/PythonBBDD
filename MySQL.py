@@ -33,7 +33,7 @@ try:
     #region SELECT
     #hacer un query SELECT 1
     cursor.execute("SELECT * FROM pokemon")
-    for fila in cursor:
+    for fila in cursor.fetchall():
         print(", ".join(str(n) for n in fila))
 
     print("-"*40)
