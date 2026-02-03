@@ -8,7 +8,7 @@ try:
     db = mysql.connector.connect(user="daw2", password="LaElipa", host="localhost", database="dwes3")
     cursor = db.cursor()
     cursor.execute("UPDATE pokemon SET nombre = UPPER(nombre) WHERE peso > 200")
-    conn.commit()
+    db.commit()
     print("Registros modificados:", cursor.rowcount)
 
     """

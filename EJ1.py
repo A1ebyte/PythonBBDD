@@ -7,7 +7,7 @@ try:
     cursor = db.cursor()
     cursor.execute("SELECT nombre FROM pokemon WHERE altura > 1.5")
 
-    for nombre in cursor.fetchall():
+    for (nombre,) in cursor.fetchall():
         print(nombre)
 
     """

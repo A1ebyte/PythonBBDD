@@ -20,7 +20,7 @@ try:
     # Insertar el nuevo Pokémon
     sql = f"INSERT INTO pokemon (numero_pokedex, nombre, peso, altura) VALUES ({nuevo_codigo}, {nombre}, {peso}, {altura})"
     cursor.execute(sql)
-    conn.commit()
+    db.commit()
 
     print("Pokémon insertado con código:", nuevo_codigo)
 

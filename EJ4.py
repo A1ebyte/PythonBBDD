@@ -9,7 +9,7 @@ try:
     codigo = int(input("Código del Pokémon a eliminar: "))
     sql=f"DELETE FROM pokemon WHERE numero_pokedex = {codigo}"
     cursor.execute(sql)
-    conn.commit()
+    db.commit()
 
     if cursor.rowcount > 0:
         print("Pokémon eliminado correctamente")
